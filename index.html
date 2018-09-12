@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Toad vs. Yoshi</title>
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <div id="weaponDiv">
+    <div class="weapon-item">
+      <h4>Shell</h4>
+      <img src='./img/blue_shell.png' alt="blue shell">
+      <p>Damage:20</p>
+    </div>
+    <div class="weapon-item">
+      <h4>Coin</h4>
+      <img src='./img/coin.png' alt="coin">
+      <p>Damage:30</p>
+    </div>
+    <div class="weapon-item">
+      <h4>Bricks</h4>
+      <img src='./img/brick.png' alt="brick">
+      <p>Damage:40</p>
+    </div>
+    <div class="weapon-item">
+      <h4>Gun</h4>
+      <img src='./img/gun.png' alt="gun">
+      <p>Damage:50</p>
+    </div>
+  </div>
+
+  <div class="yoshi-container" id="yoshiContainerDiv">
+    <div class="player">
+      <h2> Yoshi </h2>
+      <img src="img/yoshi2.png">
+      <div id="player-1-yoshi" class="player"></div>
+    </div>
+    <div class="weapon">
+      <h2 class="score">Score: <span id="yoshiScore" class="score">100</span></h2>
+      <h3 class="strength">Weapon Value: <span id="yoshiWeapon" class="weapon-value">10</span></h3>
+      <div class="turn"></div>
+      <div class="buttons">
+        <button id="yoshiAttackButton" class="button attack inactive" disabled>Attack</button>
+        <button id="yoshiDefendButton" class="button defend inactive" disabled>Defend</button>
+        <div> <img src="img/big-yoshi.png"> </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="startGameDiv">
+    <h1>Yoshi vs. Toad</h1>
+    <p class="first-para"> Begin the battle between friends...</p>
+    <p>You can move a maximum of 3 spaces horizontally or vertically.</p>
+    <p>You can collect cupcakes and shells to gain a higher weapon score.</p>
+    <p>The aim of the game is to gain a high weapon score and attack the other player. </p>
+    <p>Once you are next to them you can attack or defend.</p>
+    <p>Good Luck! </p>
+
+    <button id="startButton" class="game-button">Start</button>
+
+  </div>
+
+  <!-- Container for Gameboard -->
+  <div id="toadYoshiDiv"> </div>
+
+  <div id="gameOverDiv">
+    <h1>GAME OVER</h1>
+    <div class="declaration">
+      <h2 class="winner"> Congrats! <span id="winningPlayer"></span>. You are the WINNER!</h2>
+    </div>
+    <button id="playAgainButton" class="button play-again-button">Play Again</button>
+  </div>
+
+  <div class="toad-container" id="toadContainerDiv">
+    <div class="player">
+      <h2>Toad</h2>
+      <img src="img/toad2.png">
+      <div id="player-2-toad" class="player"></div>
+    </div>
+    <div class="weapon">
+      <h2 class="score">Score: <span id="toadScore" class="score">100</span></h2>
+      <h3 class="strength">Weapon Value: <span id="toadWeapon" class="weapon-value">10</span></h3>
+      <div class="buttons">
+        <button id="toadAttackButton" class="button attack inactive" disabled>Attack</button>
+        <button id="toadDefendButton" class="button defend inactive" disabled>Defend</button>
+        <div> <img src="img/big-toad.jpg"> </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/helper.js"></script>
+  <script src="scripts/player.js"></script>
+  <script src="scripts/obstacle.js"></script>
+  <script src="scripts/weapon.js"></script>
+  <script src="scripts/toadYoshi.js"></script>
+  <script src="scripts/main.js"></script>
+
+</body>
+
+</html>

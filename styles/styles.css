@@ -1,0 +1,325 @@
+body {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body::after {
+  content: "";
+  background-image: url("../img/background-image.png");
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.without-after-element:after {
+  content: none;
+}
+
+#startGameDiv, #gameOverDiv {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#gameOverDiv {
+  margin-top: 200px;
+}
+
+#startGameDiv > p {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-size: 1.8rem;
+  color: #200272;
+}
+
+p.top-para {
+  margin-top: 80px;
+}
+
+#startGameDiv h1, #gameOverDiv h1 {
+  font-size: 3em;
+  text-align: center;
+  color: #055507;
+  line-height: 0.85;
+  margin: 0 auto;
+  width: 10em;
+  text-decoration: underline;
+}
+
+.game-button {
+  font-size: 2rem;
+  text-align: center;
+  background: transparent;
+  border-radius: 30px;
+  border-color: #055507;
+  color: #055507;
+  padding: 10px 40px 10px 40px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.game-button:hover {
+  background: #055507;
+  color: #fff;  
+}
+
+.game-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.game-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.first-para {
+  margin-top: 60px;
+}
+
+#startButton {
+  margin-top: 60px;
+}
+
+#weaponDiv {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.4em;
+  border-bottom: 2px solid #055507;
+  border-left: 2px solid #055507;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+#weaponDiv img {
+  width: 50px;
+}
+
+.weapon-item {
+  width: 150px;
+  height: 150px;
+}
+
+#toadYoshiDiv {
+  padding: 1px;
+  background-color: #055507;
+  display: inline-block;
+  border-radius: 0.5%;
+}
+
+.toad-container {
+  margin: 10px;
+  height: 510px;
+  border-right: 2px solid #055507;
+  border-bottom: 2px solid #055507;
+  border-radius: 30px;
+}
+
+.yoshi-container {
+  margin: 10px;
+  height: 510px;
+  border-left: 2px solid #055507;
+  border-bottom: 2px solid #055507;
+  border-radius: 30px;
+}
+
+.weapon img {
+  margin-top: 20px;
+  height: 200px;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+
+.button.defend.active {
+  background-color: #4caf50;
+}
+
+.button.attack.active {
+  background-color: #f44336;
+}
+
+.button.defend.inactive {
+  background-color: #4caf50;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+.button.attack.inactive {
+  background-color: #f44336;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+.col {
+  width: 65px;
+  height: 65px;
+  display: inline-block;
+  background-color: whitesmoke;
+  border-radius: 5%;
+  margin: 5px;
+}
+
+.col.empty.next-toad {
+  background-image: url("../img/player2-active.png");
+  background-repeat: no-repeat;
+  background-size: 40px 60px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.col.empty.next-yoshi {
+  background-image: url("../img/player1-active.png");
+  background-repeat: no-repeat;
+  background-size: 50px 60px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.col.obstacle {
+  background-image: url("../img/obstacle.png");
+  background-repeat: no-repeat;
+  background-size: 65px 65px;
+}
+
+.col.tree {
+  background-image: url("../img/tree.png");
+  background-repeat: no-repeat;
+  background-size: 65px 65px;
+}
+
+.col.cupcake {
+  background-position: center;
+  background-image: url("../img/cupcake.png");
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+}
+
+.col.coin {
+  background-position: center;
+  background-image: url("../img/coin.png");
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+}
+
+.col.brick{
+  background-position: center;
+  background-image: url("../img/brick.png");
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+}
+
+.col.shell {
+  background-position: center;
+  background-image: url("../img/blue_shell.png");
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+}
+
+.col.gun {
+  background-position: center;
+  background-image: url("../img/gun.png");
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+}
+
+
+.col.highlighted {
+  background-color: #fff2a3;
+}
+
+.col.red {
+  border: 2px solid red;
+}
+
+.col.toad {
+  background-image: url("../img/toad.png");
+  background-repeat: no-repeat;
+  background-size: 45px 60px;
+}
+
+.col.yoshi {
+  background-image: url("../img/yoshi.png");
+  background-repeat: no-repeat;
+  background-size: 50px 60px;
+}
+
+.toad-container {
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.yoshi-container {
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.score {
+  font-size: 18px;
+}
+
+#message {
+  font-size: 12px;
+}
+
+.strength {
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.buttons button {
+  width: 50%;
+}
+
+.play-again-button {
+  font-size: 2em;
+  text-align: center;
+  background: transparent;
+  border-radius: 28px;
+  color: salmon;
+  padding: 10px 40px 10px 40px;
+  text-decoration: none;
+  border: none;
+}
+
+.play-again-button:hover {
+  background: salmon;
+  color: #fff;  
+}
+
+.declaration {
+  margin: 30px 0;
+  font-size: 2em;
+}
+
+#winningPlayer {
+  color: red;
+  text-transform: capitalize;
+  font-size: 64px;
+}
